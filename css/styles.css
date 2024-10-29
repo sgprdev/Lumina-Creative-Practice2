@@ -88,6 +88,7 @@ img {
     font-weight: normal;
 }
 
+
 .gallery-flex {
     display: flex;
     justify-content: center;
@@ -108,6 +109,8 @@ img {
     opacity: 0.9;
 }
 
+=======
+
 /* media query */
 @media(max-width: 768px) {
     .header .header-flex{
@@ -122,7 +125,9 @@ img {
         font-size: 1.8rem;
     }
 
+
     .gallery-item{
         width: calc(50% - 20px);
     }
+
 }
