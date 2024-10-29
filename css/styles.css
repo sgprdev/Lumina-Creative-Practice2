@@ -88,6 +88,29 @@ img {
     font-weight: normal;
 }
 
+
+.gallery-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item{
+    width: calc(33% - 20px);
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    opacity: 0.9;
+}
+
+=======
+
 /* media query */
 @media(max-width: 768px) {
     .header .header-flex{
@@ -101,4 +124,10 @@ img {
     .hero h2 {
         font-size: 1.8rem;
     }
+
+
+    .gallery-item{
+        width: calc(50% - 20px);
+    }
+
 }
