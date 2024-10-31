@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color:#fcf5e9;
+    --dark-color:#333;
+    --container-normal: 1100px;
+    --container-wide: 1400px;
+    --container-narrow: 900px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -22,7 +30,48 @@ img {
 
 /* utility classes */
 .bg-primary {
-    background: #fcf5e9 ;
+    background: var(--primary-color);
+    color:#333
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-dark .bg-primary {
+    padding: 0 0.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #333;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+.section-heading {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .section-heading {
@@ -33,17 +82,17 @@ img {
 
 /* container */
 .container {
-    max-width: 1100px;
+    max-width: var(--container-normal);
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 .container-lg {
-    max-width: 1400px;
+    max-width: var(--container-wide);
 }
 
 .container-sm {
-    max-width: 900px;
+    max-width: var(--container-narrow);
 }
 
 /* Header */
@@ -71,11 +120,11 @@ img {
 }
 
 .header .main-menu a:hover {
-    background: #fcf5e9;
+    background: var(--primary-color);
 }
 
 .current {
-    background: #fcf5e9;
+    background: var(--primary-color);
     font-weight: 600;
 }
 
@@ -144,6 +193,7 @@ img {
 
 /* services */
 .services {
+
     background: #333;
     color: #fff;
     padding: 3rem 0 4rem;
@@ -171,6 +221,43 @@ img {
 
 .team img {
     border-radius: 10px;
+}
+
+/* contact */
+.contact {
+    padding: 3rem 0 4rem;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin: 2rem 0;
+}
+
+.contact input,
+.contact textarea {
+    border: none;
+    border-bottom: 1px #333 solid;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+}
+
+.contact textarea {
+    height: 200px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 0;
+}
+
+.contact button{
+    width: 100%;
 }
 
 /* media query */
